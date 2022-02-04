@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<style>
+    .button > div {
+        background-color: orangered;
+        color: orangered;
+        padding: 50px 20px;
+        width: 28%;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-top: 50px;
+        margin-right: 40px;
+        display: inline-block;
+    }
+
+    .button {
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 50px !important;
+    }
+
+        .button > div:hover {
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            color: white;
+            background-color: darkblue;
+        }
+
+    body {
+        background-color: lightgoldenrodyellow;
+    }
+</style>
+<div class="text-center">
+    <h1 class="display-4">Welcome to GTBank</h1>
+</div>
+<div class="button">
+
+    <div><a asp-controller="home" asp-action="CreateCustomer">Account Opening</a></div>
+    <div><a asp-controller="home" asp-action="LoanApplication">Loan Application</a></div>
+</div>

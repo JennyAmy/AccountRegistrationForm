@@ -1,0 +1,132 @@
+﻿@model TblCustomerCreation
+
+@{ ViewData["Title"] = "Create Customer";
+    var message = ViewBag.SuccessMsg;
+    }
+
+<div class="content mt-3 mb-5 pt-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div style="text-align:center" class="header">
+                        <h4 class="title">Customer Creation and Account Opening Form</h4>
+                    </div>
+                    <div class="content">
+                        <form asp-controller="home" asp-action="createcustomer" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Surname</label>
+                                        <input type="text" asp-for="Surname" class="form-control" placeholder="Surname">
+                                        <span asp-validation-for="Surname" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Firstname</label>
+                                        <input type="text" asp-for="FirstName" class="form-control" placeholder="Firstname">
+                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Other Name</label>
+                                        <input type="text" asp-for="Othername" class="form-control" placeholder="Other Name">
+                                        <span asp-validation-for="Othername" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Title</label>
+                                        <input type="text" asp-for="Title" class="form-control" placeholder="Title">
+                                        <span asp-validation-for="Title" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Residence</label>
+                                        <input type="text" asp-for="Residence" class="form-control" placeholder="Residence">
+                                        <span asp-validation-for="Residence" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>BVN</label>
+                                        <input type="text" asp-for="Bvn" class="form-control" placeholder="BVN">
+                                        <span asp-validation-for="Bvn" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" asp-for="Email" class="form-control" placeholder="Email">
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Mobile Phone</label>
+                                        <input type="text" asp-for="MobilePhone" class="form-control" placeholder="Mobile Phone">
+                                        <span asp-validation-for="MobilePhone" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <select asp-for="Gender" class="form-control form-select custom-select mr-sm-2" placeholder="Size" asp-items="Html.GetEnumSelectList<Gender>()">
+                                        <option value="">Please Select Gender</option>
+                                    </select>
+                                    <span asp-validation-for="Gender" class="text-danger"></span>
+                                </div>
+
+
+                            </div>
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-info btn-fill text-center">Create Account</button>
+                            </div>
+                            <div class="clearfix"></div>
+
+
+
+
+                        </form>
+
+                        @section Scripts  {
+                            if (ViewBag.Message != null){
+                            <script type="text/javascript">
+
+                            window.onload = function () {
+                                    alert("@ViewBag.Message");
+                                };
+                            </script>
+                        }
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    </div>
+
+
+
+
+

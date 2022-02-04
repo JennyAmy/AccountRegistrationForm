@@ -1,0 +1,136 @@
+﻿@model TblLoanApplication
+
+@{ ViewData["Title"] = "Loan Application"; }
+
+<div class="content mt-3 mb-5 pt-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div style="text-align:center" class="header">
+                        <h4 class="title">Loan Application Form</h4>
+                    </div>
+                    <div class="content">
+                        <form asp-controller="home" asp-action="loanapplication" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Customer Name</label>
+                                        <input type="text" asp-for="CustomerName" class="form-control" placeholder="Customer Name">
+                                        <span asp-validation-for="CustomerName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-6">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Tenor</label>
+                                                <input type="text" asp-for="Tenor" class="form-control" placeholder="Tenor">
+                                                <span asp-validation-for="Tenor" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Interest Rate</label>
+                                        <input type="text" asp-for="InterestRate" class="form-control" placeholder="Interest Rate">
+                                        <span asp-validation-for="InterestRate" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-6">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Effective Date</label>
+                                                <input type="text" asp-for="EffectiveDate" class="form-control" placeholder="Effective Date">
+                                                <span asp-validation-for="EffectiveDate" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>First Pay Date</label>
+                                        <input type="text" asp-for="FirstPayDate" class="form-control" placeholder="First Pay Date">
+                                        <span asp-validation-for="FirstPayDate" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Principal Frequency</label>
+                                        <input type="text" asp-for="PrincipalFreq" class="form-control" placeholder="Principal Frequency">
+                                        <span asp-validation-for="PrincipalFreq" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Interest Frequency</label>
+                                        <input type="text" asp-for="InterestFreq" class="form-control" placeholder="First Name">
+                                        <span asp-validation-for="InterestFreq" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Principal Frequency</label>
+                                        <input type="text" asp-for="PrincipalFreq" class="form-control" placeholder="Last Name">
+                                        <span asp-validation-for="PrincipalFreq" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Product Code</label>
+                                        <input type="number" asp-for="ProductCode" class="form-control" placeholder="Product Code">
+                                        <span asp-validation-for="ProductCode" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Account Number</label>
+                                        <input type="number" asp-for="AccountNumber" class="form-control" placeholder="Phone Number">
+                                        <span asp-validation-for="AccountNumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Principal Amount</label>
+                                        <input type="number" asp-for="PrincipalAmount" class="form-control" placeholder="Phone Number">
+                                        <span asp-validation-for="PrincipalAmount" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Account Number</label>
+                                        <input type="number" asp-for="AccountNumber" class="form-control" placeholder="Account Number">
+                                        <span asp-validation-for="AccountNumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-info btn-fill text-center">Apply for Loan</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
